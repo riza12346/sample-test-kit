@@ -23,15 +23,6 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
         borderRadius: 10,
         overflow: 'hidden',
         padding: 10,
-        shadowColor: '#000',
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-        flexDirection: 'column'
       }}>
 
 <View style={{
@@ -42,6 +33,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 autoPlay={true}
 loop={true}
 />
+
       </View>
 
         <View style={{
@@ -108,5 +100,3 @@ loop={true}
    
   );
 }
-
-

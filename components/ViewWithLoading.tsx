@@ -1,8 +1,9 @@
+
 import * as React from 'react';
 import { View, SafeAreaView, StyleProp, StyleSheet, ViewStyle } from "react-native";
 import Loader from "./Loader";
 import { HeaderHeightContext } from "@react-navigation/elements";
-
+//import { commonColor } from '../constants/Colors';
 
 interface HeaderProps {
     children: any,
@@ -31,7 +32,7 @@ export default ViewWithLoading;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-      
+        backgroundColor: '#7209b7',
         // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
     }
 })

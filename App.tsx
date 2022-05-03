@@ -1,22 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import useCachedResources from './hooks/useCachedResources';
-import useColorScheme from './hooks/useColorScheme';
-import Navigation from './navigation';
-
+import React from 'react';
+import MyStack from './components/MyStack';
+import { NavigationContainer } from '@react-navigation/native';
+import NotesProvider from './utils/notesContext';
+import 'react-native-get-random-values'
 export default function App() {
-  const isLoadingComplete = useCachedResources();
-  const colorScheme = useColorScheme();
-
-  if (!isLoadingComplete) {
-    return null;
-  } else {
-    return (
-      <SafeAreaProvider>
-        <Navigation colorScheme={colorScheme} />
-        <StatusBar />
-      </SafeAreaProvider>
-    );
-  }
-}
+  return (
+      <NavigationContainer>
+        <NotesProvider>
+         <MyStack />
+        </NotesProvider>
+      </NavigationContainer>
+  );
+};
